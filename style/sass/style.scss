@@ -1,6 +1,88 @@
-$color: red;
+@import 'variables';
 
-* { 
-    color: purple;
-    background-color: black;
+html, body  {
+    height: 100%;
+    margin: 0;
 }
+
+body {
+    background-color: $background-color;
+    color: $text-color;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    .navbar {
+        /* Navbar Styling using SASS */
+        /* Main Navbar styling */
+        &#mainNavbar {
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            position: fixed; 
+            padding: 16px 32px; /* Default padding */ 
+            transition: all 0.3s ease-in-out;
+            background-color: $background-color;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+        
+            // Navbar when it shrinks
+            &.shrink {
+                padding: 6px 10px !important; /* Default padding */
+                background-color: $background-color;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                width: 100%;
+            
+            }
+        
+            // Targeting links and other navbar elements
+            .navbar-nav {
+                .nav-link {
+                    text-align: center;
+                    color: $primairy-light;
+            
+                    &:hover {
+                    color: $secondairy-light !important; 
+                    }
+            
+                    &.active {
+                    font-weight: bold;
+                    color: $secondairy-light !important; // Active link styling
+                    }
+                }
+            }
+        
+            // Targeting the logo styling
+            // #logo {
+            // height: 50px; // Default height
+            // transition: height 0.3s ease-in-out;
+            // }
+
+
+        }
+  
+    }
+
+    .content {
+        flex: 1;
+        margin-top: 88px;
+    }
+
+    footer {
+        background-color: $background-color; /* Use your color variables */
+        text-align: center;
+        padding: 1rem 0;
+        width: 100%;
+        margin-top: auto; /* Push the footer to the bottom when content is shorter */
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+
+        .container {
+            .row {
+                p {
+                    color: $text-color;
+                }                
+            }
+        }
+    }
+}
+

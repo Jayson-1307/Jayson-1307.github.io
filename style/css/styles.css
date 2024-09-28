@@ -1,6 +1,60 @@
-* {
-  color: purple;
-  background-color: black;
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: #2a2c2d;
+  color: #fffefb;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+body .navbar {
+  /* Navbar Styling using SASS */
+  /* Main Navbar styling */
+}
+body .navbar#mainNavbar {
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  position: fixed;
+  padding: 16px 32px; /* Default padding */
+  transition: all 0.3s ease-in-out;
+  background-color: #2a2c2d;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+body .navbar#mainNavbar.shrink {
+  padding: 6px 10px !important; /* Default padding */
+  background-color: #2a2c2d;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+body .navbar#mainNavbar .navbar-nav .nav-link {
+  text-align: center;
+  color: #d8d8d8;
+}
+body .navbar#mainNavbar .navbar-nav .nav-link:hover {
+  color: #00d4ff !important;
+}
+body .navbar#mainNavbar .navbar-nav .nav-link.active {
+  font-weight: bold;
+  color: #00d4ff !important;
+}
+body .content {
+  flex: 1;
+  margin-top: 88px;
+}
+body footer {
+  background-color: #2a2c2d; /* Use your color variables */
+  text-align: center;
+  padding: 1rem 0;
+  width: 100%;
+  margin-top: auto; /* Push the footer to the bottom when content is shorter */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+body footer .container .row p {
+  color: #fffefb;
 }
 
 /*# sourceMappingURL=styles.css.map */
