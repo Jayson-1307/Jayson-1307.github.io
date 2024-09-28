@@ -14,3 +14,42 @@ document.addEventListener('DOMContentLoaded', function () {
     // Run the function when the page is scrolled
     window.addEventListener('scroll', handleNavbarShrink);
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const typingElement = document.getElementById('typing');
+    const textArray = ["Hi, I'm Jayson van Olffen", "I'm a student Software Engineer", "Welcome to my portfolio!"];
+    let arrayIndex = 0;
+    let charIndex = 0;
+    const typingSpeed = 100; // Milliseconds per character
+    const erasingSpeed = 50; // Milliseconds per character when erasing
+    const delayBetweenTexts = 1000; // Delay between each phrase
+
+    // Typing function
+    function type() {
+        if (charIndex < textArray[arrayIndex].length) {
+            typingElement.textContent += textArray[arrayIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(type, typingSpeed);
+        } else {
+            setTimeout(erase, delayBetweenTexts);
+        }
+    }
+
+    // Erasing function
+    function erase() {
+        if (charIndex > 0) {
+            typingElement.textContent = textArray[arrayIndex].substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(erase, erasingSpeed);
+        } else {
+            arrayIndex++;
+            if (arrayIndex >= textArray.length) {
+                arrayIndex = 0; // Loop back to the first text
+            }
+            setTimeout(type, typingSpeed + 500); // Pause before typing next phrase
+        }
+    }
+
+    // Start the typing effect
+    setTimeout(type, delayBetweenTexts);
+});
