@@ -12,6 +12,18 @@ body {
     display: flex;
     flex-direction: column;
 
+    p {
+        color: $primairy-color; 
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: $text-color;
+    }
+
+    span {
+        color: $secondairy-color;
+    }
+
     .navbar {
         /* Navbar Styling using SASS */
         /* Main Navbar styling */
@@ -124,6 +136,96 @@ body {
                     p {
                         color: $primairy-color;
                     }
+                }
+            }
+
+            .skills-showcase {
+                background-color: $background-color;
+                color: $text-color;
+                padding: 2rem;
+                border-radius: 8px;
+                text-align: center;
+                max-width: 800px;
+                margin: 2rem auto;
+              
+                h2 {
+                  font-size: 2rem;
+                  margin-bottom: 1rem;
+                  color: $text-color;
+                }
+              
+                .skills-list {
+                  display: flex;
+                  flex-wrap: wrap;
+                  justify-content: center;
+                  gap: 1rem;
+              
+                  .skill {
+                    background-color: $secondairy-color;
+                    border-radius: 4px;
+                    padding: 1rem 1.5rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+                    transition: transform 0.3s ease, background-color 0.3s ease;
+              
+                    i {
+                      font-size: 1.5rem;
+                    }
+              
+                    span {
+                      font-weight: 600;
+                      font-size: 1rem;
+                      color: $text-color;
+                    }
+              
+                    &:hover {
+                      transform: translateY(-5px);
+                      background-color: $secondairy-dark;
+                    }
+                  }
+                }
+              }
+
+            .cta-bar {
+                // Break out of container and make it full width
+                position: relative;
+                left: 50%;
+                right: 50%;
+                margin-left: -50vw;
+                margin-right: -50vw;
+                width: 100vw;
+              
+                // Styling
+                background-color: $primairy-color;
+                color: #fff;
+                padding: 1rem 2rem;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                span {
+                    color: $text-color;
+                }
+                
+                // Social icons styling
+                .social-icons {
+                  margin-left: 1rem;
+                  display: flex;
+                  gap: 1rem;
+              
+                  a {
+                    color: #fff;
+                    font-size: 1.5rem;
+                    transition: transform 0.3s ease, color 0.3s ease;
+              
+                    &:hover {
+                      transform: scale(1.1);
+                      color: darken($primairy-color, 10%);
+                    }
+                  }
                 }
             }
         }

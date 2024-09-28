@@ -8,6 +8,8 @@ $primairy-dark: #6d6d6d;
 $secondairy-color: #00adff;
 $secondairy-light: #00d4ff;
 $secondairy-dark: #0077b3;
+$highlight-color: lighten($secondairy-color, 20%);
+
 
 $text-color: #fffefb;
 
