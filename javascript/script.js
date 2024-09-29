@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('DOMContentLoaded', function () {
     const typingElement = document.getElementById('typing');
-    const textArray = ["Hi, I'm Jayson van Olffen", "I'm a student Software Engineer", "Welcome to my portfolio!"];
+    const textArray = ["Hi, I'm Jayson van Olffen", "I'm a Software Engineering student.", "Welcome to my portfolio!"];
     let arrayIndex = 0;
     let charIndex = 0;
     const typingSpeed = 100; // Milliseconds per character

@@ -1,27 +1,27 @@
 // colors
 $background-color: #2a2c2d;
 
-$primairy-color: #a59c9a;
-$primairy-light: #d8d8d8;
-$primairy-dark: #6d6d6d;
+$primary-color: #a59c9a;
+$primary-light: #d8d8d8;
+$primary-dark: #6d6d6d;
 
-$secondairy-color: #00adff;
-$secondairy-light: #00d4ff;
-$secondairy-dark: #0077b3;
-$highlight-color: lighten($secondairy-color, 20%);
+$secondary-color: #00adff;
+$secondary-light: #00d4ff;
+$secondary-dark: #0077b3;
+$highlight-color: lighten($secondary-color, 20%);
 
 
 $text-color: #fffefb;
 
-$primairy-btn-text: $text-color;
-$primairy-btn-bg: $secondairy-color;
-$primairy-btn-hover: $secondairy-dark;
+$primary-btn-text: $text-color;
+$primary-btn-bg: $secondary-color;
+$primary-btn-hover: $secondary-dark;
 
-$secondairy-btn-color: $primairy-light;
-$secondairy-btn-bg: $primairy-dark;
-$secondairy-btn-hover: $primairy-color;
+$secondary-btn-color: $primary-light;
+$secondary-btn-bg: $primary-dark;
+$secondary-btn-hover: $primary-color;
 
-$link-color: $secondairy-color;
+$link-color: $secondary-color;
 
 //mixins
 @mixin flex-center {
@@ -30,9 +30,9 @@ $link-color: $secondairy-color;
     align-items: center;
 }
 
-@mixin button-primairy {
-    color: $primairy-btn-text;
-    background-color: $primairy-btn-bg;
+@mixin button-primary {
+    color: $primary-btn-text;
+    background-color: $primary-btn-bg;
     border: none;
     border-radius: 5px;
     padding: 0.5rem 1rem;
@@ -40,13 +40,13 @@ $link-color: $secondairy-color;
     transition: all 0.3s ease-in-out;
 
     &:hover {
-        background-color: $primairy-btn-hover;
+        background-color: $primary-btn-hover;
     }
 }
 
-@mixin button-secondairy {
-    color: $secondairy-btn-color;
-    background-color: $secondairy-btn-bg;
+@mixin button-secondary {
+    color: $secondary-btn-color;
+    background-color: $secondary-btn-bg;
     border: none;
     border-radius: 5px;
     padding: 0.5rem 1rem;
@@ -54,7 +54,7 @@ $link-color: $secondairy-color;
     transition: all 0.3s ease-in-out;
 
     &:hover {
-        background-color: $secondairy-btn-hover;
+        background-color: $secondary-btn-hover;
     }
 }
 

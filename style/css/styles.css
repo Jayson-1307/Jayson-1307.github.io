@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body {
   height: 100%;
   margin: 0;
@@ -18,6 +19,26 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 }
 body span {
   color: #00adff;
+}
+body .btn.btn-primary {
+  background-color: #a59c9a;
+  color: #fffefb;
+  border: 2px solid #a59c9a;
+}
+body .btn.btn-primary:hover {
+  background-color: #6d6d6d;
+  border: 2px solid rgb(106.45, 106.45, 106.45);
+  transform: scale(1.1);
+}
+body .btn.btn-secondary {
+  background-color: #00adff;
+  color: #fffefb;
+  border: 2px solid #00adff;
+}
+body .btn.btn-secondary:hover {
+  background-color: #0077b3;
+  border: 2px solid rgb(0, 115.6094972067, 173.9);
+  transform: scale(1.1);
 }
 body .navbar {
   /* Navbar Styling using SASS */
@@ -106,7 +127,114 @@ body .content .content-wrapper .block-100 .section-left {
 body .content .content-wrapper .block-100 .section-left p {
   color: #a59c9a;
 }
-body .content .content-wrapper .skills-showcase {
+body .content .content-wrapper .about-me-section {
+  background-color: #2a2c2d; /* Maintain consistency with the overall background */
+  padding: 60px 20px; /* Add padding for spacing */
+}
+body .content .content-wrapper .about-me-section .about-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto; /* Center the container */
+}
+body .content .content-wrapper .about-me-section .about-container .about-left, body .content .content-wrapper .about-me-section .about-container .about-right {
+  flex: 1;
+  min-width: 300px;
+  box-sizing: border-box;
+  padding: 20px;
+}
+body .content .content-wrapper .about-me-section .about-container .about-left h2 {
+  font-size: 2rem;
+  color: #fffefb; /* Use primary color for headings */
+  margin-bottom: 1rem;
+}
+body .content .content-wrapper .about-me-section .about-container .about-left p {
+  color: #a59c9a;
+  line-height: 1.6;
+  margin-bottom: 1.5rem; /* Provide space between paragraphs */
+}
+body .content .content-wrapper .about-me-section .about-container .about-right .interests {
+  background-color: rgb(54.3103448276, 56.8965517241, 58.1896551724); /* Slightly lighter to differentiate */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+body .content .content-wrapper .about-me-section .about-container .about-right .interests h3 {
+  color: #00adff; /* Use secondary color for this heading */
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+body .content .content-wrapper .about-me-section .about-container .about-right .interests ul {
+  list-style: none;
+  padding: 0;
+}
+body .content .content-wrapper .about-me-section .about-container .about-right .interests ul li {
+  color: #fffefb;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  padding-left: 20px;
+  position: relative;
+}
+body .content .content-wrapper .about-me-section .about-container .about-right .interests ul li:before {
+  content: "•"; /* Custom bullet point */
+  position: absolute;
+  left: 0;
+  color: #0077b3; /* A darker accent for bullets */
+}
+body .content .content-wrapper.about-me-page {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+body .content .content-wrapper.about-me-page .profile-section {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+body .content .content-wrapper.about-me-page .profile-section .profile-image {
+  max-width: 250px;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+body .content .content-wrapper.about-me-page .profile-section .profile-intro {
+  flex: 1;
+}
+body .content .content-wrapper.about-me-page .profile-section .profile-intro h2 {
+  color: #a59c9a;
+  margin-bottom: 1rem;
+}
+body .content .content-wrapper.about-me-page .profile-section .profile-intro p {
+  color: #fffefb;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+body .content .content-wrapper.about-me-page .timeline-section {
+  margin-bottom: 40px;
+}
+body .content .content-wrapper.about-me-page .timeline-section h3 {
+  color: #a59c9a;
+  margin-bottom: 20px;
+}
+body .content .content-wrapper.about-me-page .timeline-section .timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+body .content .content-wrapper.about-me-page .timeline-section .timeline .timeline-step {
+  padding-left: 40px;
+}
+body .content .content-wrapper.about-me-page .timeline-section .timeline .timeline-step .year {
+  left: 0;
+  top: 0;
+  font-weight: bold;
+  color: #0077b3;
+}
+body .content .content-wrapper.about-me-page .timeline-section .timeline .timeline-step p {
+  color: #fffefb;
+}
+body .content .content-wrapper.about-me-page .skills-showcase {
   background-color: #2a2c2d;
   color: #fffefb;
   padding: 2rem;
@@ -115,18 +243,18 @@ body .content .content-wrapper .skills-showcase {
   max-width: 800px;
   margin: 2rem auto;
 }
-body .content .content-wrapper .skills-showcase h2 {
+body .content .content-wrapper.about-me-page .skills-showcase h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #fffefb;
+  color: #a59c9a;
 }
-body .content .content-wrapper .skills-showcase .skills-list {
+body .content .content-wrapper.about-me-page .skills-showcase .skills-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
 }
-body .content .content-wrapper .skills-showcase .skills-list .skill {
+body .content .content-wrapper.about-me-page .skills-showcase .skills-list .skill {
   background-color: #00adff;
   border-radius: 4px;
   padding: 1rem 1.5rem;
@@ -136,19 +264,83 @@ body .content .content-wrapper .skills-showcase .skills-list .skill {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
-body .content .content-wrapper .skills-showcase .skills-list .skill i {
+body .content .content-wrapper.about-me-page .skills-showcase .skills-list .skill i {
   font-size: 1.5rem;
 }
-body .content .content-wrapper .skills-showcase .skills-list .skill span {
+body .content .content-wrapper.about-me-page .skills-showcase .skills-list .skill span {
   font-weight: 600;
   font-size: 1rem;
   color: #fffefb;
 }
-body .content .content-wrapper .skills-showcase .skills-list .skill:hover {
+body .content .content-wrapper.about-me-page .skills-showcase .skills-list .skill:hover {
   transform: translateY(-5px);
   background-color: #0077b3;
 }
-body .content .content-wrapper .cta-bar {
+body .content .content-wrapper.about-me-page .internship-section {
+  margin-bottom: 40px;
+}
+body .content .content-wrapper.about-me-page .internship-section h3 {
+  color: #a59c9a;
+  margin-bottom: 20px;
+}
+body .content .content-wrapper.about-me-page .internship-section h4, body .content .content-wrapper.about-me-page .internship-section h5 {
+  color: rgb(189.0314136126, 182.4345549738, 180.9685863874);
+}
+body .content .content-wrapper.about-me-page .internship-section p {
+  color: #fffefb;
+  line-height: 1.6;
+  margin-bottom: 15pxrem;
+}
+body .content .content-wrapper.about-me-page .interests-section {
+  margin-bottom: 40px;
+}
+body .content .content-wrapper.about-me-page .interests-section h3 {
+  color: #a59c9a;
+  margin-bottom: 20px;
+}
+body .content .content-wrapper.about-me-page .interests-section ul {
+  list-style: none;
+  padding: 0;
+}
+body .content .content-wrapper.about-me-page .interests-section ul li {
+  color: #fffefb;
+  margin-bottom: 0.8rem;
+  padding-left: 20px;
+  position: relative;
+}
+body .content .content-wrapper.about-me-page .interests-section ul li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #0077b3;
+}
+body .content .content-wrapper.about-me-page .cta-section {
+  text-align: center;
+}
+body .content .content-wrapper.about-me-page .cta-section p {
+  color: #fffefb;
+  margin-bottom: 20px;
+}
+body .content .content-wrapper.about-me-page .cta-section .btn-primary {
+  background-color: #00adff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  border-color: #0077b3;
+}
+body .content .content-wrapper.about-me-page .cta-section .btn-primary:hover {
+  background-color: #0077b3;
+}
+body footer {
+  background-color: #2a2c2d; /* Use your color variables */
+  text-align: center;
+  padding: 0px 0 10px;
+  width: 100%;
+  margin-top: auto; /* Push the footer to the bottom when content is shorter */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+body footer .social-media {
   position: relative;
   left: 50%;
   right: 50%;
@@ -163,30 +355,25 @@ body .content .content-wrapper .cta-bar {
   justify-content: center;
   align-items: center;
 }
-body .content .content-wrapper .cta-bar span {
+body footer .social-media span {
   color: #fffefb;
 }
-body .content .content-wrapper .cta-bar .social-icons {
+body footer .social-media .social-icons {
   margin-left: 1rem;
   display: flex;
   gap: 1rem;
 }
-body .content .content-wrapper .cta-bar .social-icons a {
+body footer .social-media .social-icons a {
   color: #fff;
   font-size: 1.5rem;
   transition: transform 0.3s ease, color 0.3s ease;
 }
-body .content .content-wrapper .cta-bar .social-icons a:hover {
+body footer .social-media .social-icons a:hover {
   transform: scale(1.1);
   color: rgb(140.9685863874, 129.5654450262, 127.0314136126);
 }
-body footer {
-  background-color: #2a2c2d; /* Use your color variables */
-  text-align: center;
-  padding: 10px 0;
-  width: 100%;
-  margin-top: auto; /* Push the footer to the bottom when content is shorter */
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+body footer .container .row {
+  margin-top: 10px;
 }
 body footer .container .row p {
   padding: 0;
