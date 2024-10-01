@@ -53,3 +53,14 @@ document.addEventListener('DOMContentLoaded', function () {
     // Start the typing effect
     setTimeout(type, delayBetweenTexts);
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the current path
+    const path = window.location.pathname;
+
+    // Check if the URL does not end with '/' or does not have an extension
+    if (!path.endsWith('/') && !path.includes('.')) {
+      // Append .html and redirect
+      window.location.replace(path + ".html");
+    }
+});
