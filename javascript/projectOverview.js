@@ -44,11 +44,11 @@ projects.forEach(project => {
     projectDescription.textContent = project[1]; // Short description
     projectContainer.appendChild(projectDescription);
 
-    // Create a details element for the project
-    // const projectLink = document.createElement('p');
-    // projectLink.classList.add('details');
-    // projectLink.textContent = project[2]; // Details about the project
-    // projectContainer.appendChild(projectLink);
+    // Create a link element for the project
+    const projectLink = document.createElement('p');
+    projectLink.classList.add('link');
+    projectLink.textContent = "View project >>>"; // Details about the project
+    projectContainer.appendChild(projectLink);
 
     // Append the project container to the #projectlist element
     projectListElement.appendChild(projectContainer);

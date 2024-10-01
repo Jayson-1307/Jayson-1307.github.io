@@ -126,6 +126,7 @@ body {
                 padding: 20px 0;
             }
 
+            // home page styling
             .typing-banner {
                 text-align: center;
                 padding-top: 15px;
@@ -134,112 +135,68 @@ body {
 
             .block-100 {
                 display: flex;
-                width: 100%;
-                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: stretch;
+                gap: 20px; /* To maintain space between the sections */
+                flex-wrap: wrap; /* Allows wrapping on smaller screens */
 
 
                 .section-50 {
                     width: 100%;
+                    flex: 1 100%;
                 }
 
                 .section-right {
                     order: 1;
+                    padding: 0 50px;
+                    // padding-left: 20px;
                     display: flex;
-                    justify-content: center;
                     align-items: center;
+                    justify-content: center;
+                    min-width: 300px; /* Ensures a minimum width for the image section */
 
                     .pf {
                         display: flex;
                         justify-content: center;
+                        align-items: center;
+                        height: 100%; /* Matches the height of the left content */
+
                         img {
+                            max-width: 100%;
                             max-height: 100%;
-                            width: auto;
-                            object-fit: contain;
+                            object-fit: cover; /* Ensures the image maintains aspect ratio */
+                            border-radius: 8px; /* Optional: Rounded corners for a nice touch */
                         }
                     }
                 }
                 
                 .section-left {
                     order: 2;
+                    flex: 1;
                     padding-top: 20px;
+                    // padding-right: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    min-width: 300px; /* Ensures a minimum width for the text section */
 
                     p {
                         color: $primary-color;
+                    }
+
+                    .button-holder {
+                        display: flex;
+                        gap: 20px;
+                        justify-content: center;
+                        padding-top: 20px;
                     }
                 }
             }
 
             
             
-
-            .about-me-section {
-                background-color: $background-color; /* Maintain consistency with the overall background */
-                padding: 60px 20px; /* Add padding for spacing */
+            //about me Styling
             
-                .about-container {
-                    display: flex;
-                    flex-wrap: wrap; /* Allow wrapping for smaller screens */
-                    gap: 30px;
-                    max-width: 1200px;
-                    margin: 0 auto; /* Center the container */
-            
-                    .about-left, .about-right {
-                        flex: 1;
-                        min-width: 300px;
-                        box-sizing: border-box;
-                        padding: 20px;
-                    }
-            
-                    .about-left {
-                        h2 {
-                            font-size: 2rem;
-                            color: $text-color; /* Use primary color for headings */
-                            margin-bottom: 1rem;
-                        }
-            
-                        p {
-                            color: $primary-color;
-                            line-height: 1.6;
-                            margin-bottom: 1.5rem; /* Provide space between paragraphs */
-                        }
-                    }
-            
-                    .about-right {
-                        .interests {
-                            background-color: lighten($background-color, 5%); /* Slightly lighter to differentiate */
-                            padding: 20px;
-                            border-radius: 8px;
-                            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-            
-                            h3 {
-                                color: $secondary-color; /* Use secondary color for this heading */
-                                margin-bottom: 1rem;
-                                font-size: 1.5rem;
-                            }
-            
-                            ul {
-                                list-style: none;
-                                padding: 0;
-            
-                                li {
-                                    color: $text-color;
-                                    font-size: 1rem;
-                                    margin-bottom: 0.8rem;
-                                    padding-left: 20px;
-                                    position: relative;
-            
-                                    &:before {
-                                        content: '•'; /* Custom bullet point */
-                                        position: absolute;
-                                        left: 0;
-                                        color: $secondary-dark; /* A darker accent for bullets */
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }  
 
             
 
@@ -254,6 +211,9 @@ body {
                     display: flex;
                     gap: 20px;
                     margin-bottom: 40px;
+                    flex-direction: column;
+                    align-items: center;
+
             
                     .profile-image {
                         max-width: 250px;
@@ -294,6 +254,7 @@ body {
                         .timeline-step {
                             // position: relative;
                             padding-left: 40px;
+                            padding-right: 40px;
             
                             .year {
                                 // position: absolute;
@@ -332,7 +293,7 @@ body {
                       gap: 1rem;
                   
                       .skill {
-                        background-color: $secondary-color;
+                        background-color: $primary-color;
                         border-radius: 4px;
                         padding: 1rem 1.5rem;
                         display: flex;
@@ -353,38 +314,80 @@ body {
                   
                         &:hover {
                           transform: translateY(-5px);
-                          background-color: $secondary-dark;
+                          background-color: $primary-dark;
                         }
                       }
                     }
                 }
             
-                // .skills-section {
-                //     margin-bottom: 40px;
-            
-                //     .skills-grid {
-                //         display: grid;
-                //         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                //         gap: 20px;
-            
-                //         .skill-card {
-                //             background-color: lighten($background-color, 5%);
-                //             padding: 20px;
-                //             border-radius: 8px;
-                //             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-                //             text-align: center;
-            
-                //             img {
-                //                 max-height: 50px;
-                //                 margin-bottom: 10px;
-                //             }
-            
-                //             p {
-                //                 color: $text-color;
-                //             }
-                //         }
-                //     }
-                // }
+                .about-me-section {
+                    background-color: $background-color; /* Maintain consistency with the overall background */
+                    padding: 60px 20px; /* Add padding for spacing */
+                
+                    .about-container {
+                        display: flex;
+                        flex-wrap: wrap; /* Allow wrapping for smaller screens */
+                        gap: 30px;
+                        max-width: 1200px;
+                        margin: 0 auto; /* Center the container */
+                
+                        .about-left, .about-right {
+                            flex: 1;
+                            min-width: 300px;
+                            box-sizing: border-box;
+                            padding: 20px;
+                        }
+                
+                        .about-left {
+                            h2 {
+                                font-size: 2rem;
+                                color: $text-color; /* Use primary color for headings */
+                                margin-bottom: 1rem;
+                            }
+                
+                            p {
+                                color: $primary-color;
+                                line-height: 1.6;
+                                margin-bottom: 1.5rem; /* Provide space between paragraphs */
+                            }
+                        }
+                
+                        .about-right {
+                            .interests {
+                                background-color: lighten($background-color, 5%); /* Slightly lighter to differentiate */
+                                padding: 20px;
+                                border-radius: 8px;
+                                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+                
+                                h3 {
+                                    color: $secondary-color; /* Use secondary color for this heading */
+                                    margin-bottom: 1rem;
+                                    font-size: 1.5rem;
+                                }
+                
+                                ul {
+                                    list-style: none;
+                                    padding: 0;
+                
+                                    li {
+                                        color: $text-color;
+                                        font-size: 1rem;
+                                        margin-bottom: 0.8rem;
+                                        padding-left: 20px;
+                                        position: relative;
+                
+                                        &:before {
+                                            content: '•'; /* Custom bullet point */
+                                            position: absolute;
+                                            left: 0;
+                                            color: $secondary-dark; /* A darker accent for bullets */
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }  
             
                 .internship-section {
                     margin-bottom: 40px;
@@ -692,12 +695,19 @@ body {
 
 
             // projects page styling
+            .page-title {
+                text-align: center;
+                
+                h2 {
+                    color: $primary-color
+                }
+            }
+
             .projects-list {
                 display: flex;
                 flex-wrap: wrap;
                 cursor: pointer;
                 gap: 20px;
-                
 
                 .project {
                     width: 100%;
@@ -716,6 +726,15 @@ body {
                     &:hover {
                         transform: scale(1.02);
                         border: 4px solid $secondary-color;
+
+                        .link {
+                            color: $secondary-color;
+                        }
+                    }
+
+                    .link {
+                        margin-top: auto;
+                        color: $secondary-dark;
                     }
                 }
             }
@@ -867,6 +886,13 @@ body {
                         }
                     }
                 }   
+
+                &.about-me-page {
+                    .profile-section {
+                        flex-direction: row;
+                    }
+                }
+
                 // project page styling for large screens
                 .projects-list {
 
