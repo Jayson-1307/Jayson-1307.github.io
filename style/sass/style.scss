@@ -253,8 +253,8 @@ body {
             
                         .timeline-step {
                             // position: relative;
-                            padding-left: 40px;
-                            padding-right: 40px;
+                            padding-left: 10px;
+                            padding-right: 10px;
             
                             .year {
                                 // position: absolute;
@@ -708,6 +708,7 @@ body {
                 flex-wrap: wrap;
                 cursor: pointer;
                 gap: 20px;
+                
 
                 .project {
                     width: 100%;
@@ -736,6 +737,13 @@ body {
                         margin-top: auto;
                         color: $secondary-dark;
                     }
+                }
+            }
+            .add-on {
+                text-align: center;
+
+                h3 {
+                    color: $primary-color;
                 }
             }
         }
@@ -810,7 +818,7 @@ body {
             .content-wrapper {
                 .projects-list {
                     flex-wrap: wrap;
-                    justify-content: space-between;
+                    justify-content: center;
 
                     .project {
                         $width : calc(50% - 10px);
@@ -839,7 +847,16 @@ body {
     @media screen and (min-width: $md-min) {
         .content {
             .content-wrapper {
-                
+                &.about-me-page {
+                    .timeline-section {
+                        .timeline {
+                            .timeline-step {
+                                padding-left: 40px;
+                                padding-right: 40px;
+                            }
+                        }
+                    }
+                }
             }
         }
         

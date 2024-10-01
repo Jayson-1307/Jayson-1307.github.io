@@ -192,8 +192,8 @@ body .content .content-wrapper.about-me-page .timeline-section .timeline {
   gap: 20px;
 }
 body .content .content-wrapper.about-me-page .timeline-section .timeline .timeline-step {
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 body .content .content-wrapper.about-me-page .timeline-section .timeline .timeline-step .year {
   left: 0;
@@ -585,6 +585,12 @@ body .content .content-wrapper .projects-list .project .link {
   margin-top: auto;
   color: #0077b3;
 }
+body .content .content-wrapper .add-on {
+  text-align: center;
+}
+body .content .content-wrapper .add-on h3 {
+  color: #a59c9a;
+}
 body footer {
   background-color: #2a2c2d; /* Use your color variables */
   text-align: center;
@@ -636,7 +642,7 @@ body footer .container .row p {
 @media screen and (min-width: 480px) {
   body .content .content-wrapper .projects-list {
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
   }
   body .content .content-wrapper .projects-list .project {
     width: calc(50% - 10px);
@@ -651,6 +657,12 @@ body footer .container .row p {
   body .content .content-wrapper .projects-list .project p {
     text-align: center;
     margin: 10px 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  body .content .content-wrapper.about-me-page .timeline-section .timeline .timeline-step {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 @media screen and (min-width: 992px) {
