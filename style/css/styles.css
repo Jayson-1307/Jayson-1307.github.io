@@ -701,6 +701,7 @@ body footer .container .row p {
   }
   body .content .content-wrapper .block-100 .section-right .pf img {
     max-height: 100%;
+    max-width: 100%;
     width: auto;
     object-fit: contain;
   }
