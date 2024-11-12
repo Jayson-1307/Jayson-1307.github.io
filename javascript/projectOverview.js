@@ -1,9 +1,8 @@
-// First: title of the project, second: description of the project, third: link to git repository or website
 const project1 = [
     "Code Exchange", 
     "Code exchange website (like Stack Overflow) where developers can ask and answer questions. ",
     "https://github.com/Jayson-1307/Code-Exchange"
-    ];
+];
 
 const project2 = [
     "Game Engine - Text based adventure game", 
@@ -17,20 +16,34 @@ const project3 = [
     "https://github.com/Jayson-1307/Game-webshop"
 ];
 
-const projects = [project1, project2, project3];
+const project4 = [
+    "Discord bot (python)",
+    "Discord bot that can be used to play games some games like blackjack and slot machines. It has a currency and it can be used to moderate the server as well.",
+    "https://github.com/Jayson-1307/Discord-bot"
+]; 
+
+const project5 = [
+    "Dokkie payments",
+    "An online tool to manage payments for a group of people. It can be used to keep track of who paid for what and who owes who.",
+    "https://github.com/Jayson-1307/Dokkie-payments"
+]; 
+
+const projects = [project1, project2, project3, project4, project5];
 
 const projectListElement = document.getElementById('projectList');
 
-
-
 projects.forEach(project => {
-    projectListElement.onclick = function() {
-        window.location.href = project[2];
-    }
-
     // Create a container for each project
     const projectContainer = document.createElement('div');
     projectContainer.classList.add('project');
+
+    // Add an onclick event to the entire project container
+    projectContainer.onclick = function() {
+        window.open(project[2], '_blank'); // Open link in a new window/tab
+    };
+
+    // Add some styles to indicate the container is clickable
+    projectContainer.style.cursor = 'pointer';
 
     // Create a title element for the project
     const projectTitle = document.createElement('h3');
@@ -44,13 +57,12 @@ projects.forEach(project => {
     projectDescription.textContent = project[1]; // Short description
     projectContainer.appendChild(projectDescription);
 
-    // Create a link element for the project
+    // Create a link text element for the project
     const projectLink = document.createElement('p');
     projectLink.classList.add('link');
     projectLink.textContent = "View project >>>"; // Details about the project
     projectContainer.appendChild(projectLink);
 
-    // Append the project container to the #projectlist element
+    // Append the project container to the #projectList element
     projectListElement.appendChild(projectContainer);
-    
 });
