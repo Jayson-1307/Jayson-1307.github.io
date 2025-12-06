@@ -4,12 +4,14 @@
   "description": "Jayson van Olffen portfolio website.",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch style/sass/style.scss:style/css/styles.css"
+    "sass": "sass --watch style/sass/style.scss:style/css/styles.css",
+    "start": "live-server"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "live-server": "^1.2.2",
     "sass": "^1.79.3"
   },
   "dependencies": {
