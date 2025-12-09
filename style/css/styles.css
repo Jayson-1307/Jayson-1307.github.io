@@ -616,6 +616,36 @@ body .content .content-wrapper .add-on {
 body .content .content-wrapper .add-on h3 {
   color: #a59c9a;
 }
+body .content .content-wrapper .block-image-right {
+  width: 100%;
+}
+body .content .content-wrapper .block-image-right .image-float {
+  float: right;
+  max-width: 16rem;
+  height: auto;
+  margin: 0 0 1rem 1rem;
+  display: block;
+}
+body .content .content-wrapper .block-image-right .image-float img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+body .content .content-wrapper .block-image-left {
+  width: 100%;
+}
+body .content .content-wrapper .block-image-left .image-float {
+  float: left;
+  max-width: 16rem;
+  height: auto;
+  margin: 0 1rem 1rem 0;
+  display: block;
+}
+body .content .content-wrapper .block-image-left .image-float img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
 body footer {
   background-color: #2a2c2d; /* Use your color variables */
   text-align: center;

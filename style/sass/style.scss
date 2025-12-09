@@ -775,10 +775,42 @@ body {
                     color: $primary-color;
                 }
             }
+
+            // content block where text wraps around image
+            .block-image-right {
+                width: 100%;
+                .image-float {
+                    float: right;
+                    max-width: 16rem;   
+                    height: auto;
+                    margin: 0 0 1rem 1rem; // ruimte onder + links
+                    display: block;
+
+                    img {
+                        max-width: 100%;
+                        height: auto;
+                        border-radius: 8px;
+                    }
+                }
+            }
+
+            .block-image-left {
+                width: 100%;
+                .image-float {
+                    float: left;
+                    max-width: 16rem;   
+                    height: auto;
+                    margin: 0 1rem 1rem 0; // ruimte onder + rechts
+                    display: block;
+
+                    img {
+                        max-width: 100%;
+                        height: auto;
+                        border-radius: 8px;
+                    }
+                }
+            }
         }
-
-
-        
     }
 
     footer {
