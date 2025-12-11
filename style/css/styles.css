@@ -616,6 +616,11 @@ body .content .content-wrapper .add-on {
 body .content .content-wrapper .add-on h3 {
   color: #a59c9a;
 }
+body .content .content-wrapper .contribution {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
 body .content .content-wrapper .block-image-right {
   width: 100%;
 }

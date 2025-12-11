@@ -776,6 +776,12 @@ body {
                 }
             }
 
+            .contribution {
+                display: flex;
+                flex-direction: column;
+                gap: 3rem;
+            }
+
             // content block where text wraps around image
             .block-image-right {
                 width: 100%;
