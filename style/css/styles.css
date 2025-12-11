@@ -11,7 +11,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-body p {
+body p, body li {
   color: #a59c9a;
 }
 body h1, body h2, body h3, body h4, body h5, body h6 {
@@ -700,6 +700,16 @@ body .content .content-wrapper .block-50-50.image-left .image-block {
 body .content .content-wrapper .block-text-100 {
   width: 100%;
 }
+body .content .content-wrapper .block-text-50-50 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+body .content .content-wrapper .block-text-50-50 .text-section {
+  width: 100%;
+  flex: 1 1 100%;
+}
 body footer {
   background-color: #2a2c2d; /* Use your color variables */
   text-align: center;
@@ -771,6 +781,10 @@ body footer .container .row p {
   body .content .content-wrapper.about-me-page .timeline-section .timeline .timeline-step {
     padding-left: 40px;
     padding-right: 40px;
+  }
+  body .content .content-wrapper .block-text-50-50 .text-section {
+    width: 100%;
+    flex: 1 1 calc(50% - 10px);
   }
 }
 @media screen and (min-width: 992px) {

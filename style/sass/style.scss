@@ -12,7 +12,7 @@ body {
     display: flex;
     flex-direction: column;
 
-    p {
+    p, li {
         color: $primary-color; 
     }
 
@@ -879,6 +879,18 @@ body {
             .block-text-100{
                 width: 100%;
             }
+
+            .block-text-50-50 {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+
+                .text-section {
+                    width: 100%;
+                    flex: 1 1 100%;
+                }
+            }
         }
     }
 
@@ -991,6 +1003,13 @@ body {
                                 padding-right: 40px;
                             }
                         }
+                    }
+                }
+
+                .block-text-50-50 {
+                    .text-section {
+                        width: 100%;
+                        flex: 1 1 calc(50% - 10px);
                     }
                 }
             }
