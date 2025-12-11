@@ -646,6 +646,60 @@ body .content .content-wrapper .block-image-left .image-float img {
   height: auto;
   border-radius: 8px;
 }
+body .content .content-wrapper .block-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body .content .content-wrapper .block-images .image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  padding: 0 1rem;
+}
+body .content .content-wrapper .block-images .image img {
+  width: 100%;
+  height: auto;
+}
+body .content .content-wrapper .block-50-50 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+body .content .content-wrapper .block-50-50 .text-block, body .content .content-wrapper .block-50-50 .image-block {
+  flex: 1 1 calc(50% - 10px);
+}
+body .content .content-wrapper .block-50-50 .text-block {
+  align-content: center;
+}
+body .content .content-wrapper .block-50-50 .image-block {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+body .content .content-wrapper .block-50-50 .image-block img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+body .content .content-wrapper .block-50-50.image-right .text-block {
+  order: 1;
+}
+body .content .content-wrapper .block-50-50.image-right .image-block {
+  order: 2;
+}
+body .content .content-wrapper .block-50-50.image-left .text-block {
+  order: 2;
+}
+body .content .content-wrapper .block-50-50.image-left .image-block {
+  order: 1;
+}
+body .content .content-wrapper .block-text-100 {
+  width: 100%;
+}
 body footer {
   background-color: #2a2c2d; /* Use your color variables */
   text-align: center;
@@ -708,6 +762,10 @@ body footer .container .row p {
     text-align: center;
     margin: 10px 0;
   }
+  body .content .content-wrapper .block-images .image {
+    max-width: 50%;
+    width: 50%;
+  }
 }
 @media screen and (min-width: 768px) {
   body .content .content-wrapper.about-me-page .timeline-section .timeline .timeline-step {
@@ -757,6 +815,10 @@ body footer .container .row p {
   }
   body .content .content-wrapper.about-me-page .profile-section {
     flex-direction: row;
+  }
+  body .content .content-wrapper .block-images .image {
+    max-width: 33%;
+    max-width: 33%;
   }
 }
 

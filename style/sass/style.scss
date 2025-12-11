@@ -810,6 +810,75 @@ body {
                     }
                 }
             }
+
+            // images block
+            .block-images {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                .image {
+                    max-width: 100%;
+                    height: auto;
+                    margin-bottom: 1rem;
+                    border-radius: 8px;
+                    padding: 0 1rem;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+
+            // 50-50 block
+            .block-50-50 {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+
+                .text-block, .image-block {
+                    flex: 1 1 calc(50% - 10px);
+                }
+
+                .text-block {
+                    align-content: center;
+                }
+
+                .image-block {
+                    display: flex;
+                    justify-content: center;
+                    align-content: center;
+                    img {
+                        max-width: 100%;
+                        height: auto;
+                        border-radius: 8px;
+                        margin: 0 auto;
+                    }
+                }
+
+                &.image-right {
+                    .text-block {
+                        order: 1;
+                    }
+                    .image-block {
+                        order: 2;
+                    }
+                }
+
+                &.image-left {
+                    .text-block {
+                        order: 2;
+                    }
+                    .image-block {
+                        order: 1;
+                    }
+                }
+            }
+
+            .block-text-100{
+                width: 100%;
+            }
         }
     }
 
@@ -899,6 +968,12 @@ body {
                             margin: 10px 0;
                         }
                         
+                    }
+                }
+                .block-images {
+                    .image {
+                        max-width: 50%; 
+                        width: 50%;
                     }
                 }
             }
@@ -993,6 +1068,13 @@ body {
                     //
                     //}
                 } 
+                
+                .block-images {
+                    .image {
+                        max-width: 33%;
+                        max-width: 33%;
+                    }
+                }
             }
 
         }
