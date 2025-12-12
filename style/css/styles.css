@@ -361,6 +361,7 @@ body .content .content-wrapper .contact-info {
   background-color: rgb(54.3103448276, 56.8965517241, 58.1896551724);
   padding: 60px 20px;
   text-align: center;
+  border-radius: 0.5rem;
 }
 body .content .content-wrapper .contact-info h2 {
   color: #00adff;
@@ -621,6 +622,17 @@ body .content .content-wrapper .contribution {
   flex-direction: column;
   gap: 3rem;
 }
+body .content .content-wrapper .contribution h2 {
+  margin-bottom: -2rem;
+}
+body .content .content-wrapper .skills {
+  background-color: rgb(54.3103448276, 56.8965517241, 58.1896551724);
+  padding: 60px 20px;
+  border-radius: 8px;
+}
+body .content .content-wrapper .skills ul {
+  padding-left: 1rem;
+}
 body .content .content-wrapper .block-image-right {
   width: 100%;
 }
@@ -665,7 +677,7 @@ body .content .content-wrapper .block-images .image {
 }
 body .content .content-wrapper .block-images .image img {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 body .content .content-wrapper .block-50-50 {
   display: flex;
@@ -689,6 +701,7 @@ body .content .content-wrapper .block-50-50 .image-block img {
   height: auto;
   border-radius: 8px;
   margin: 0 auto;
+  max-height: 25rem;
 }
 body .content .content-wrapper .block-50-50.image-right .text-block {
   order: 1;
