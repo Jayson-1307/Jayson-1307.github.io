@@ -728,6 +728,38 @@ body .content .content-wrapper .block-text-50-50 .text-section {
   width: 100%;
   flex: 1 1 100%;
 }
+body .content .content-wrapper .end-expo .carousel .carousel-inner {
+  max-height: 36rem;
+}
+body .content .content-wrapper .end-expo .carousel .carousel-inner .carousel-item img {
+  max-height: 36rem;
+  object-fit: cover;
+  margin: 0 auto;
+}
+body .content .content-wrapper .end-expo .carousel .carousel-inner .carousel-item .carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+}
+body .content .content-wrapper .end-expo .carousel button {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+body .content .content-wrapper .end-expo .carousel button span {
+  color: #000;
+}
+body .content .content-wrapper .advisory-report {
+  padding: 60px 20px;
+  text-align: center;
+  margin-bottom: 40px;
+  background-color: rgb(54.3103448276, 56.8965517241, 58.1896551724);
+  border-radius: 0.5rem;
+}
+body .content .content-wrapper .separator {
+  height: 2px;
+  background-color: #6d6d6d;
+  margin: 40px 0;
+}
 body footer {
   background-color: #2a2c2d; /* Use your color variables */
   text-align: center;
